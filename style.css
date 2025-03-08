@@ -1,0 +1,14 @@
+.window{
+    position: absolute;
+    width: 90%;
+    top: 100px;
+    z-index: 1;
+    left: 5%;
+    background-color: aqua;
+    display: none;
+}
+@media screen and (max-width:350px){
+    .srch{
+        width: 120px;
+    }
+}

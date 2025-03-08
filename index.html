@@ -9,15 +9,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-light bg-success">
+    <nav class="navbar navbar-light bg-success py-3">
         <div class="container-fluid">
           <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input class="form-control srch me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light" type="submit">Search</button>
           </form>
-          <i class="fa-solid fa-cart-shopping text-light fs-4"></i>
+          <button type="button" class="btn cart-but btn-success position-relative" onclick="appear()" value="0">
+            <i class="fa-solid fa-cart-shopping text-light fs-4"></i>
+            <span class="position-absolute top-0 start-90 translate-middle badge rounded-pill bg-info d-none">
+              0
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
         </div>
       </nav>
+      <div class="window">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero illo deserunt molestiae perferendis, laboriosam commodi corrupti nulla amet vel necessitatibus, neque sed ullam accusamus voluptates dolores repudiandae doloribus enim animi.</div>
     <div class="row justify-content-evenly px-2"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="app.js"></script>

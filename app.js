@@ -1,4 +1,6 @@
 var getRow=document.querySelector('.row')
+var getWindow=document.querySelector('.window')
+var getCartBut=document.querySelector('.cart-but')
 fetch('https://fakestoreapi.com/products')
 .then(response => response.json())
 .then(data => {
@@ -22,7 +24,7 @@ fetch('https://fakestoreapi.com/products')
               <h5 class="card-title">${cv.category}</h5>
      <img src="${cv.image}" width="90%" height="200px" alt="">
                   <p class="card-text">ID: ${cv.id} <br> Price: ${cv.price}$ <br> Title:<br> ${cv.title}</p>
-              <a href="#" class="btn btn-primary">Add to cart</a>
+              <button class="btn btn-primary" onclick="addToCart(this)">Add to cart</button>
             </div>
           </div>
         </div>`
@@ -31,3 +33,18 @@ fetch('https://fakestoreapi.com/products')
 .catch(err=>{
 console.log(err)
 })
+function addToCart(a){
+    a.disabled=true
+    // getWindow.innerHTML=a.parentNode.parentNode.parentNode.innerHTML 
+    // Come here
+}
+function appear(){
+    if(getCartBut.value==0){
+        getWindow.style.display='block'
+        getCartBut.value=1
+    }
+    else{
+        getWindow.style.display='none'
+        getCartBut.value=0
+    }
+}
