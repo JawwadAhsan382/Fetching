@@ -11,6 +11,9 @@
     /* grid-row: 20px !important; */
     display: none;
 }
+.badge{
+    display: none;
+}
 .window>.card{
     width: 30%;
     margin: 20px 0;
@@ -18,5 +21,9 @@
 @media screen and (max-width:350px){
     .srch{
         width: 120px;
+    }
+    .window>.card{
+        width: 80%;
+        margin: 20px 0;
     }
 }
