@@ -35,12 +35,11 @@ console.log(err)
 })
 function addToCart(a){
     a.disabled=true
-    // getWindow.innerHTML=a.parentNode.parentNode.parentNode.innerHTML 
-    // Come here
+    getWindow.innerHTML+=a.parentNode.parentNode.parentNode.innerHTML
 }
 function appear(){
     if(getCartBut.value==0){
-        getWindow.style.display='block'
+        getWindow.style.display='flex'
         getCartBut.value=1
     }
     else{
