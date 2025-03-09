@@ -3,6 +3,8 @@ var getWindow=document.querySelector('.window')
 var getCartBut=document.querySelector('.cart-but')
 getCartBut.disabled=true
 var getBadge=document.querySelector('.badge')
+var getSearch=document.querySelector('.srch')
+var getCross=document.querySelector('.cross')
 fetch('https://fakestoreapi.com/products')
 .then(response => response.json())
 .then(data => {
@@ -60,4 +62,25 @@ function appear(){
         getWindow.style.display='none'
         getCartBut.value=0
     }
+}
+function filtering(){
+    Array.from(getRow.childNodes).map((cv)=>{cv.style.display='block'})
+    var filteredArray=Array.from(getRow.childNodes).filter((cv)=>{
+        // return !(getSearch.value.toLowerCase()==cv.firstChild.firstChild.childNodes[1].innerText)
+        if(cv.firstChild.firstChild.childNodes[1].innerText.indexOf(getSearch.value.toLowerCase())==-1){
+            return true
+        }
+        else{
+            return false
+        }
+    })
+    filteredArray.map((cv)=>{cv.style.display='none'})
+    getCross.childNodes[0].childNodes[1].innerText=getRow.childNodes.length-filteredArray.length
+    getCross.style.display='flex'
+}
+function goBack(){
+    getSearch.value=''
+    getCross.childNodes[0].childNodes[1].innerText=0
+    getCross.style.display='none'
+    Array.from(getRow.childNodes).map((cv)=>{cv.style.display='block'})
 }

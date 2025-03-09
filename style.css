@@ -4,7 +4,6 @@
     top: 100px;
     z-index: 1;
     left: 5%;
-    background-color: aqua;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -12,6 +11,11 @@
     display: none;
 }
 .badge{
+    display: none;
+}
+.cross{
+    display: flex;
+    justify-content: space-between;
     display: none;
 }
 .window>.card{
