@@ -22,9 +22,9 @@
     width: 30%;
     margin: 20px 0;
 }
-@media screen and (max-width:350px){
+@media screen and (max-width:400px){
     .srch{
-        width: 120px;
+        width: 100px;
     }
     .window>.card{
         width: 80%;
