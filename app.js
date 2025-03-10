@@ -66,8 +66,7 @@ function appear(){
 function filtering(){
     Array.from(getRow.childNodes).map((cv)=>{cv.style.display='block'})
     var filteredArray=Array.from(getRow.childNodes).filter((cv)=>{
-        // return !(getSearch.value.toLowerCase()==cv.firstChild.firstChild.childNodes[1].innerText)
-        if(cv.firstChild.firstChild.childNodes[1].innerText.indexOf(getSearch.value.toLowerCase())==-1){
+        if(cv.firstChild.firstChild.childNodes[1].innerText.indexOf(getSearch.value.split(' ').filter((cv)=>{ return cv}).join('').toLowerCase())==-1){
             return true
         }
         else{
