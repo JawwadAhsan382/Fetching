@@ -1,14 +1,23 @@
-.window{
+.cart{
     position: absolute;
     width: 90%;
     top: 100px;
     z-index: 1;
     left: 5%;
     display: flex;
+    flex-direction: column;
+    display: none;
+}
+.cart>h1,.cart>h3{
+    text-align: center;
+}
+.window{
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     /* grid-row: 20px !important; */
-    display: none;
+    /* display: none; */
 }
 .badge{
     display: none;
